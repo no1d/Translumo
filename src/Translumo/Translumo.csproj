@@ -6,10 +6,10 @@
 	
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
-		<TargetFramework>net7.0-windows10.0.19041.0</TargetFramework>
+		<TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
 		<UseWPF>true</UseWPF>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
-		<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
 		<SatelliteResourceLanguages>en-US;en</SatelliteResourceLanguages>
 		<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
 		<PublishSingleFile>true</PublishSingleFile>
@@ -75,7 +75,7 @@
     <PackageReference Include="MaterialDesignColors" Version="2.0.3" />
     <PackageReference Include="MaterialDesignExtensions" Version="3.3.0" />
     <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
     <PackageReference Include="Microsoft.PowerShell.SDK" Version="7.1.7" />
     <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.1" />
     <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1823.32" />
@@ -86,7 +86,7 @@
     <PackageReference Include="SharpDX" Version="4.2.0" />
     <PackageReference Include="SharpDX.Direct3D11" Version="4.2.0" />
     <PackageReference Include="SharpDX.XInput" Version="4.2.0" />
-    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.6" />
     <PackageReference Include="System.Management.Automation" Version="7.1.7" />
   </ItemGroup>
 
