@@ -71,7 +71,6 @@ namespace Translumo.MVVM.Views
         private void Window_Deactivated(object sender, EventArgs e)
         {
             this.Topmost = true;
-            this.Activate();
         }
 
         private void Window_SourceInitialized(object sender, EventArgs e)
