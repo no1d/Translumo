@@ -16,6 +16,10 @@ public class NoneTTSEngine : ITTSEngine
     {
     }
 
+    public void SetRate(int rate)
+    {
+    }
+
     public void SpeechText(string text)
     {
     }

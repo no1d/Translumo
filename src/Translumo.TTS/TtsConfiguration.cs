@@ -1,5 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using Translumo.Infrastructure.Language;
+﻿using Translumo.Infrastructure.Language;
 using Translumo.Utils;
 
 namespace Translumo.TTS;
@@ -22,6 +21,8 @@ public class TtsConfiguration : BindableBase
     private List<Languages> _installedWinTtsLanguages;
     private List<string> _availableVoices;
     private string _currentVoice;
+    private int _rate;
+
 
     public TTSEngines TtsSystem
     {
@@ -63,5 +64,11 @@ public class TtsConfiguration : BindableBase
         {
             SetProperty(ref _availableVoices, value);
         }
+    }
+
+    public int Rate
+    {
+        get => _rate;
+        set => SetProperty(ref _rate, value);
     }
 }

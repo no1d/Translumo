@@ -46,6 +46,9 @@ public class WindowsTTSEngine : ITTSEngine
 
     public void SetVoice(string voice) => _voiceInfo = _voices.First(x => x.Key.Equals(voice, StringComparison.OrdinalIgnoreCase)).Value;
 
+    public void SetRate(int rate) => _synthesizer.Rate = rate;
+
+
     // by default SpeechSynthesizer show not all available voices
     // https://stackoverflow.com/a/71198211
     private static class SpeechApiReflectionHelper

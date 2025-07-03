@@ -424,6 +424,11 @@ namespace Translumo.Processing
             {
                 _ttsEngine.SetVoice(_ttsConfiguration.CurrentVoice);
             }
+            else if (e.PropertyName == nameof(_ttsConfiguration.Rate)
+                && _ttsEngine != null)
+            {
+                _ttsEngine.SetRate(_ttsConfiguration.Rate);
+            }
         }
 
         private void OcrGeneralConfigurationOnPropertyChanged(object sender, PropertyChangedEventArgs e)

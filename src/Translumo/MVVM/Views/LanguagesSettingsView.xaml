@@ -58,6 +58,10 @@
                 <ComboBox Style="{StaticResource ComboBoxBase}" ItemsSource="{Binding Path=AvailableVoices}" SelectedItem="{Binding Path=TtsVoice}" MaxDropDownHeight="180" />
                 <Label Content="{DynamicResource Str.LangSettings.Voice}" Style="{StaticResource ControlCaptionLabel}"/>
             </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label Content="{DynamicResource Str.LangSettings.Rate}" Style="{StaticResource ControlCaptionLabel}"/>
+                <Slider Style="{DynamicResource MaterialDesignSlider}" Width="300" Value="{Binding TtsRate, Mode=TwoWay}" Minimum="-5" Maximum="5" LargeChange="3" SmallChange="1" TickPlacement="TopLeft"/>
+            </StackPanel>
             <GroupBox Style="{StaticResource MaterialDesignGroupBox}" Margin="0,20,0,0">
                 <GroupBox.Header>
                     <Label Style="{StaticResource SecondaryHeaderLabel}" Margin="0,-7,0,-7" Content="{DynamicResource Str.ProxySettings.Proxy}" />

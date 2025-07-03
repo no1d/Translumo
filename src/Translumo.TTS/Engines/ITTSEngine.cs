@@ -7,4 +7,6 @@ public interface ITTSEngine : IDisposable
     string[] GetVoices();
 
     void SetVoice(string voice);
+
+    void SetRate(int rate);
 }

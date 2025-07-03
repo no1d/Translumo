@@ -94,6 +94,16 @@ namespace Translumo.MVVM.ViewModels
             }
         }
 
+        public int TtsRate
+        {
+            get => TtsSettings.Rate;
+            set
+            {
+                ChangeTtsRate(value);
+            }
+        }
+
+
         public ICommand ProxySettingsClickedCommand => new RelayCommand(OnProxySettingsClicked);
         public ICommand ProxyItemDeletedCommand => new RelayCommand<ProxyCardItem>(OnProxyItemDeletedCommand);
         public ICommand ProxyItemAddCommand => new RelayCommand(OnProxyItemAddCommand);
@@ -213,6 +223,13 @@ namespace Translumo.MVVM.ViewModels
             Action changeTtsVoiceAction = () => this.TtsSettings.CurrentVoice = voice;
             await this.ReconfigureTts(TtsSettings.TtsLanguage, TtsSettings.TtsSystem, changeTtsVoiceAction);
             OnPropertyChanged(nameof(TtsVoice));
+        }
+
+        private async Task ChangeTtsRate(int rate)
+        {
+            Action changeTtsRateAction = () => this.TtsSettings.Rate = rate;
+            await this.ReconfigureTts(TtsSettings.TtsLanguage, TtsSettings.TtsSystem, changeTtsRateAction);
+            OnPropertyChanged(nameof(TtsRate));
         }
 
         private async Task ReconfigureTts(Languages language, TTSEngines engine, Action changeParameter)

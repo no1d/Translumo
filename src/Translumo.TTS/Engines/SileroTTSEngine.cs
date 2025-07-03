@@ -152,5 +152,10 @@ public class SileroTTSEngine : ITTSEngine
 
     public void SetVoice(string voice) => _voice = _voices.First(x => x.Equals(voice, StringComparison.OrdinalIgnoreCase));
 
+    public void SetRate(int rate)
+    {
+        // TODO
+    }
+
     private sealed record ModelDescription(string FileUrl, string WarmUpText);
 }
