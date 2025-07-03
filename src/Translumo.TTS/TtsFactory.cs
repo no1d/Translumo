@@ -9,14 +9,12 @@ namespace Translumo.TTS
     {
         private readonly LanguageService _languageService;
         private readonly PythonEngineWrapper _pythonEngine;
-        private readonly IObserverAvailableVoices _observerAvailableVoices;
         private readonly ILogger _logger;
 
-        public TtsFactory(LanguageService languageService, PythonEngineWrapper pythonEngine, IObserverAvailableVoices observerAvailableVoices, ILogger<TtsFactory> logger)
+        public TtsFactory(LanguageService languageService, PythonEngineWrapper pythonEngine, ILogger<TtsFactory> logger)
         {
             _languageService = languageService;
             _pythonEngine = pythonEngine;
-            _observerAvailableVoices = observerAvailableVoices;
             _logger = logger;
         }
 
@@ -29,9 +27,6 @@ namespace Translumo.TTS
                 //TTSEngines.SileroTTS => new SileroTTSEngine(_pythonEngine, GetLangCode(ttsConfiguration)),
                 _ => throw new NotSupportedException()
             };
-
-            var voices = ttsEngine.GetVoices();
-            _observerAvailableVoices.UpdateVoice(voices);
 
             return ttsEngine;
         }

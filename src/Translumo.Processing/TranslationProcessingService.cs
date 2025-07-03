@@ -70,6 +70,11 @@ namespace Translumo.Processing
             _ttsFactory = ttsFactory;
             _ttsConfiguration = ttsConfiguration;
             _ttsEngine = ttsFactory.CreateTtsEngine(ttsConfiguration);
+            _ttsConfiguration.AvailableVoices = _ttsEngine.GetVoices().ToList();
+            _ttsConfiguration.CurrentVoice = _ttsConfiguration.AvailableVoices.Contains(_ttsConfiguration.CurrentVoice)
+                ? _ttsConfiguration.CurrentVoice
+                : _ttsConfiguration.AvailableVoices.FirstOrDefault();
+            _ttsEngine.SetVoice(_ttsConfiguration.CurrentVoice);
             _textProcessingConfiguration = textConfiguration;
             _engines = InitializeEngines();
             _translator = _translatorFactory.CreateTranslator(_translationConfiguration);
@@ -410,6 +415,9 @@ namespace Translumo.Processing
                 _ttsEngine?.Dispose();
                 _ttsEngine = null;
                 _ttsEngine = _ttsFactory.CreateTtsEngine(_ttsConfiguration);
+
+                _ttsConfiguration.AvailableVoices = _ttsEngine.GetVoices().ToList();
+                _ttsConfiguration.CurrentVoice = _ttsConfiguration.AvailableVoices.FirstOrDefault();
             }
             else if (e.PropertyName == nameof(_ttsConfiguration.CurrentVoice)
                 && _ttsEngine != null && _ttsConfiguration.CurrentVoice != null)
