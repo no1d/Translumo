@@ -15,4 +15,10 @@
     <ProjectReference Include="..\Translumo.Utils\Translumo.Utils.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="SpeechLib">
+      <HintPath>Interop\SpeechLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
