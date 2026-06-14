@@ -9,9 +9,9 @@
 <p align="center"><strong>English</strong> | <a href="docs/README-RU.md"><strong>Русский</strong></a></p>
 
 ## Sibling Project
-This project has a sibling called **[Lookupper](https://lookupper.com)** — an on-screen dictionary for language learning. It is similar to Translumo but built for a different purpose. Lookupper is built to help you *learn* a language, not just depend on a translator forever.
+This project has a sibling called **[Lookupper](https://lookupper.com)** — a screen dictionary for language learning. It is similar to Translumo but built for a different purpose. Lookupper is built to help you *learn* a language, not just depend on a translator forever.
 
-Lookupper is my commercial project with a free version. If you find it useful and decide to grab the Pro version, you'll also be supporting the development of both Lookupper and Translumo.
+Lookupper is commercial project with a free version. If you find it useful and decide to grab the Pro version, you'll also be supporting the development of both Lookupper and Translumo.
 
 
 <a href="https://lookupper.com">
